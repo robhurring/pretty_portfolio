@@ -16,5 +16,59 @@ want to muck around in the pretty_portfolio.php code and comment out the line st
 cd wp-content/plugins
 git clone git://github.com/robhurring/pretty_portfolio.git
 
-==Setup & Usage
+==Setup
+
+This setup is a bit tricky but not too difficult for someone (un?)familiar with Wordpress.
+
+===Configure the Plugin
+
+1) Activate the plugin from the Wordpress admin panel
+
+2) Under "Settings" a new Pretty Portfolio menu will appear.
+
+3) Under the PP Settings it wants to know which Category you want to observe. To get this ID edit the category you
+		wish to use and take note of the URL. In the case of "categories.php?action=edit&cat_ID=3" we would put 3 into
+		the PP setting "portfolio category ID"
+
+===Setup our Page Template
+
+We must copy the page template to our theme's directory so we can display our new portfolio stuff.
+
+4) Copy the "plugins/pretty_portfolio/template_pretty_portfolio.php" file to your theme's folder. We must assign this
+		template to the appropriate page you want now.
+		
+5) Create/Edit the page you wish to use as your portfolio. Make sure to assign the "Pretty Portfolio" template to it.
+		(Should be an option on the right-hand sidebar) Not much else matters on this page except the Title. The content
+		will not be shown by default (Let me know if you'd like the page content to appear above the slider).
+		
+6) Now we are ready to start populating the portfolio.
+
+==How to add a portfolio piece
+
+1) Create a new Post.
+
+2) Check off the Pretty Portfolio Category ID (in our example we would use category 3, which I have as "portfolio")
+
+3) Fill in the Excerpt. This is what will show up as the blurb on our slider.
+
+4) Open up the "Pretty Portfolio" panel which should be near the bottom of the page underneath the Excerpt panel.
+
+5) Fill out the Fields.
+	(All of these are optional.. but you should probably enter at least 1 :)
+	
+	a) Big portfolio image: the image to display on the slider as a preview 
+	b) Big image preview: the bigger version to pop open when the image is clicked
+	c) Client name: really not sure about this one :)
+	d) What skills were used: Just a simple text of what you've done.
+	e) Link to client's website: if you want to throw a link to their site out there.
+	
+6) Publish.
+
+==Customizing the plugin's appearance
+
+You can find all the necessary CSS styles in the plugins/pretty_portfolio/css/pretty_portfolio.css file
+
+You can modify the layout by editing the plugins/pretty_portfolio/template_pretty_portfolio.php file. Just make
+sure you copy this back to your theme's directory after modifying (Or modify in place through the theme editor).
+
 

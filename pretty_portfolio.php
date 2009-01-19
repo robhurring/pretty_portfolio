@@ -1,17 +1,17 @@
 <?php
 /*
 Plugin Name: Pretty Portfolio
-Plugin URI: http://zerobased.com
-Description: ...
+Plugin URI: http://github.com/robhurring/pretty_portfolio
+Description: Creates a nice CODA like slider effect for your portfolio using page templates.
 Version: 1.0
-Author: Rob Hurring
-Author URI: http://zerobased.com
+Author: Rob Hurring <rob@zerobased.com>
+Author URI: http://blog.ubrio.us
 */
 
 // .h
 
-add_action('edit_form_advanced','pretty_portfolio_form',1);
-add_action('save_post','pretty_portfolio_save');
+add_action('edit_form_advanced', 'pretty_portfolio_form', 1);
+add_action('save_post', 'pretty_portfolio_save');
 add_action('admin_menu', 'pretty_portfolio_admin_menu');
 
 // #define
@@ -44,7 +44,8 @@ function include_pretty_portfolio_assets()
 	wp_enqueue_style('pretty_portfolio', $_plugin_path.'/css/pretty_portfolio.css');
 	wp_enqueue_style('lightbox', $_plugin_path.'/css/lightbox.css');
 
-	wp_deregister_script('jquery'); 
+	// comment the next line if you want to use your own jQuery file
+	wp_deregister_script('jquery');
 	foreach($_js_assets as $name => $data)
 		wp_enqueue_script($name, $_plugin_path.$data['lib'], $data['deps'], $data['version']);
 }
@@ -53,6 +54,7 @@ function pretty_portfolio_admin_menu()
 {
   add_options_page('Pretty Portfolio Settings', 'Pretty Portfolio', 7, __FILE__, 'pretty_portfolio_admin_form');
 }
+
 /**
  * Settings menu admin form
  */
@@ -81,7 +83,7 @@ function pretty_portfolio_admin_form()
       <table class="form-table">
 				<tr valign="top">
 				  <th scope="row">
-						<label for="com_cat"><em>Portfolio Category</em></label>
+						<label for="com_cat"><em>Portfolio Category ID</em></label>
 					</th>
 				  <td>
 						<input name="pretty_portfolio_category" type="text" id="pretty_portfolio_category" value="<?php echo $pretty_portfolio_category ?>" size="2" maxlength="2" /><br/>
@@ -142,7 +144,7 @@ function pretty_portfolio_save($id)
   }
 }
 
-// support / misc
+// #include
 
 function pp_truncate($text, $max_length = 30, $end = '...')
 {

@@ -77,7 +77,6 @@ Template Name: Pretty Portfolio Template
 <?php else: ?>
 	<div style='margin:40px 0;'>
 		Sorry, but there are no portfolio pieces to display currently.
-	  <?php include (TEMPLATEPATH . "/searchform.php"); ?>
 	</div>
 	<?php get_sidebar(); ?>
 <?php endif; ?>
