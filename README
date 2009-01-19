@@ -10,8 +10,11 @@ whichever you prefer.
 
 copy the pretty_portfolio to wp-content/plugins and enable it from the wordpress admin panel
 
+this plugin will include all the necessary jQuery files. If you use a custom jQuery file, you might
+want to muck around in the pretty_portfolio.php code and comment out the line stating "wp_deregister_script('jquery');"
+
 cd wp-content/plugins
 git clone git://github.com/robhurring/pretty_portfolio.git
 
-==Setup
+==Setup & Usage
 
