@@ -1,0 +1,138 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .clearfix {display: inline-block;}
+  /* Hides from IE5/Mac \*/
+  * html .clearfix {height: 1px;}
+  .clearfix {display: block;}
+  /* End hide from IE5/Mac */ 
+.right{ float:right; }
+.left{ float:left; }
+
+/*\ Slider
+\*/
+
+#slider{
+  width:915px;
+  margin:0 auto 40px;
+  position:relative;
+  }
+
+.scroll{
+  height:360px;
+  width:700px;
+  overflow:auto;
+  overflow-x:hidden;
+  position:relative;
+  clear:left;
+  background:#fff url(../images/content_pane-gradient.gif) repeat-x scroll left bottom;
+  border:1px solid #ddd;
+  }
+
+.scrollContainer div.panel{
+  padding:20px;
+  height:100%;
+  width:660px;
+  }
+
+ul.navigation{
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:208px;
+  height:350px;
+  padding-bottom:9px;
+  border:1px solid #ddd;
+  background:#eee;
+  overflow:auto;
+  }
+  ul.navigation li{
+    padding:0;
+    margin:0;
+    border-bottom:1px solid #ddd;
+    }
+    ul.navigation a{
+      display:block;
+      color:#000;
+      text-decoration:none;
+      font:11px/20px verdana, arial,sans-serif;
+      padding:5px;
+      }
+    ul.navigation a:hover{
+      background-color:#ddd;
+      }
+    ul.navigation a.selected{
+      background-color:#ccc;
+      }
+    ul.navigation a:focus{
+      outline:none;
+      }
+
+.scrollButtons{
+  position:absolute;
+  top:150px;
+  cursor:pointer;
+  display:none;
+  }
+  .scrollButtons.left{
+    left:-20px;
+    }
+  .scrollButtons.right{
+    right:-20px;
+    }
+
+.hide{
+  display:none;
+  }
+  
+/*\ Slides
+\*/
+
+.portfolio_image_big{
+  width:660px;
+  height:190px;
+  border:1px solid #eee;
+  margin-bottom:10px;
+  overflow:hidden;
+  }
+  .portfolio_image_big img{
+    margin:0;
+    padding:0;
+    border:0;
+    }
+
+.portfolio_excerpt{
+  float:left;
+  width:48%;
+  font:11px/17px verdana,sans-serif;
+  }
+
+.portfolio_details{
+  float:right;
+  width:48%;
+  }
+  .portfolio_details dl{
+    position:relative;
+    }
+  .portfolio_details dt{
+    float:left;
+    clear:both;
+    width:25%;
+    font:bold 11px/14px verdana,sans-serif;
+    padding-bottom:5px;
+    }
+  .portfolio_details dd{
+    position:relative;
+    left:10px;
+    font:11px/14px verdana,sans-serif;
+    padding-bottom:5px;
+    }
+
+.panel h2{
+	border-bottom:1px solid #ccc;
+	}

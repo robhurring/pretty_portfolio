@@ -1,0 +1,17 @@
+==About
+
+This was written again Wordpress 2.7 and I'm not sure if it will work with older versions.
+
+Pretty portfolio is a simple plugin which takes blog posts in a certain category and builds a nice
+jQuery enabled portfolio sliding widget. It has the same effect as Panic.com's CODA -- or a carousel,
+whichever you prefer.
+
+==Install
+
+copy the pretty_portfolio to wp-content/plugins and enable it from the wordpress admin panel
+
+cd wp-content/plugins
+git clone git://github.com/robhurring/pretty_portfolio.git
+
+==Setup
+
